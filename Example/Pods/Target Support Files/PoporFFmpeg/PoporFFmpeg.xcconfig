@@ -1,5 +1,6 @@
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/PoporFFmpeg
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/PoporFFmpeg" "${PODS_ROOT}/Headers/Public"
 LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../PoporFFmpeg/Classes"
 OTHER_LDFLAGS = $(inherited) -l"PoporFFmpeg" -l"bz2" -l"iconv" -l"z"
 PODS_BUILD_DIR = ${BUILD_DIR}

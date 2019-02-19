@@ -1,5 +1,5 @@
 PODS:
-  - PoporFFmpeg (0.0.07)
+  - PoporFFmpeg (0.0.08)
 
 DEPENDENCIES:
   - PoporFFmpeg (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PoporFFmpeg: 07a37e29756bd9cf17a8c437bf4aa887950f278f
+  PoporFFmpeg: ace9396e36fd4070da090f14762d1cad4b5958f0
 
 PODFILE CHECKSUM: 38be90c369a5f163195cefc273967e63cb9a5369
 
