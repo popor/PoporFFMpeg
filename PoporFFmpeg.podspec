@@ -7,36 +7,28 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'PoporFFmpeg'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of PoporFFmpeg.'
+  s.name        = 'PoporFFmpeg'
+  s.version     = '0.0.07'
+  s.summary     = '简化FFmpeg使用, 由于cocoapod对c++依赖不支持, 所以制作了这个静态包.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.homepage    = 'https://github.com/popor/PoporFFmpeg'
+  s.screenshots = 'https://github.com/popor/PoporFFmpegCompress/raw/master/Example/screen1.png'
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/popor/PoporFFmpeg'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'popor' => '908891024@qq.com' }
-  s.source           = { :git => 'https://github.com/popor/PoporFFmpeg.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'PoporFFmpeg/Classes/**/*'
+  s.license     = { :type => 'MIT', :file => 'LICENSE' }
+  s.author      = { 'popor' => '908891024@qq.com' }
+  s.source      = { :git => 'https://github.com/popor/PoporFFmpeg.git', :tag => s.version.to_s }
   
-  # s.resource_bundles = {
-  #   'PoporFFmpeg' => ['PoporFFmpeg/Assets/*.png']
-  # }
+  s.ios.frameworks = 'Foundation', 'UIKit'
+  
+  s.ios.deployment_target  = '8.0'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  
+  s.source_files = 'PoporFFmpeg/Classes/*.{h,m}'
+  
+  # ――― Project Linking ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+  s.frameworks = "VideoToolbox", "AVFoundation"
+  
+  s.vendored_libraries  = 'PoporFFmpeg/Classes/*.a'
+  s.libraries = 'iconv', 'z', 'bz2'
+  
 end
