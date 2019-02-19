@@ -23,44 +23,17 @@ pod 'PoporFFmpeg'
 ```
 
 <p>
-<img src='https://github.com/popor/PoporFFmpegCompress/blob/master/Example/screen1.png' width="30%" height="30%">
+<img src='https://github.com/popor/PoporFFmpeg/blob/master/Example/screen1.png' width="30%" height="30%">
 
 </p>
+
+##### 本仓库只提供ffmpeg接口,深度制定为 <a href='https://github.com/popor/PoporFFmpegCompress'>PoporFFmpegCompress </a>
 
 ##### 因为cocoapod对c++的依赖不完善，所以将FFmpeg做了静态包处理，静态包仓库位于 <a href='https://github.com/popor/PoporFFmpeg'>PoporFFmpeg </a>  , 原始文件位于 <a href='https://github.com/popor/PoporFFmpegLib'>PoporFFmpegLib </a> , 原始的FFmpeg pod仓库位于 <a href='https://github.com/popor/FFMpegCompress'>FFMpegCompress</a>
 
 #### 放弃对mac的支持,文件太大了,请选择使用FFmpeg官网的dmg文件,应该比这个小很多,而且还可以使用最新版本.
 
 #### 放弃对iPhone32CPU,iPhone5的支持,文件太大了,github不支持超过100MB文件.
-
-```
-使用方法
-#import <PoporFFmpeg/PoporFFmpegCompress.h>
-
-@property (nonatomic, strong) PoporFFmpegCompress * ffmpegCmd;
-
-NSString *videoPath;
-NSString *resultPath;
-
-if (!self.ffmpegCmd) {
-    self.ffmpegCmd = [PoporFFmpegCompress new];
-}
-[self.ffmpegCmd compressVideoUrl:videoPath size:CGSizeMake(540, 960) tPath:resultPath finish:^(BOOL finished, NSString *info) {
-    
-    if (finished) {
-        if (IsDebugVersion) {
-            NSData * data = [NSData dataWithContentsOfFile:resultPath];
-            NSLog(@"FFMpeg video size : %02fMB", data.length/1024.0f/1024.0f);
-        }
-    }else{
-        
-    }
-}];
-```
-
-
-
-
 
 ## Author
 
