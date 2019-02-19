@@ -23,7 +23,7 @@ pod 'PoporFFmpeg'
 ```
 
 <p>
-<img src='https://github.com/popor/PoporFFmpeg/blob/master/Example/screen1.png' width="30%" height="30%">
+<img src='https://github.com/popor/PoporFFmpeg/blob/master/Example/PoporFFmpeg/screen1.png' width="30%" height="30%">
 
 </p>
 
